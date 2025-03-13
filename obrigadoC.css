@@ -59,29 +59,28 @@ h1 {
     animation: fadeInOut 4s infinite ease-in-out; 
 }
 
-/* Ajustes para telas menores, como celulares */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Coloca o vídeo e o texto um embaixo do outro */
-        align-items: center; /* Centraliza o conteúdo */
+        flex-direction: column; 
+        align-items: center;
     }
 
     .video {
-        margin-right: 0; /* Remove o espaçamento extra na direita */
+        margin-right: 0; 
         margin-top: 10px;
-        max-width: 100%; /* Faz o vídeo ocupar 100% da largura disponível */
+        max-width: 100%; 
     }
 
     .text {
-        font-size: 1.5rem; /* Diminui o tamanho do texto */
-        letter-spacing: 3px; /* Ajusta o espaçamento entre as letras */
-        text-align: center; /* Centraliza o texto */
-        max-width: 90%; /* Garante que o texto não ultrapasse a largura */
+        font-size: 1.5rem; 
+        letter-spacing: 3px; 
+        text-align: center; 
+        max-width: 90%; 
     }
 
     video {
-        width: 100%; /* Faz o vídeo ocupar toda a largura da tela */
-        max-width: 100%; /* Garante que o vídeo se ajuste bem */
+        width: 100%; 
+        max-width: 100%; 
     }
 
     h1 {
