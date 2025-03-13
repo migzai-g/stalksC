@@ -1,0 +1,90 @@
+body {
+    background-image: url('imgC.webp');
+    background-size: cover;
+    font-family: "Iansui", cursive;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.container {
+    display: flex;  
+    justify-content: flex-start; 
+    align-items: flex-start;  
+    height: 70vh;  
+}
+
+.video {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    margin-right: 200px; 
+    margin-top: 16px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    text-align: left;  
+    font-size: 2rem;  
+    max-width: 100%;  
+    letter-spacing: 5px;
+    line-height: 1.69;
+}
+
+video {
+    max-width: 90%;  
+    max-height: 80vh;  
+    border-radius: 6px;  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }    
+    50% { opacity: 1; }   
+    100% { opacity: 0; }  
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-align: center;
+    animation: fadeInOut 4s infinite ease-in-out; 
+}
+
+/* Ajustes para telas menores, como celulares */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Coloca o vídeo e o texto um embaixo do outro */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .video {
+        margin-right: 0; /* Remove o espaçamento extra na direita */
+        margin-top: 10px;
+        max-width: 100%; /* Faz o vídeo ocupar 100% da largura disponível */
+    }
+
+    .text {
+        font-size: 1.5rem; /* Diminui o tamanho do texto */
+        letter-spacing: 3px; /* Ajusta o espaçamento entre as letras */
+        text-align: center; /* Centraliza o texto */
+        max-width: 90%; /* Garante que o texto não ultrapasse a largura */
+    }
+
+    video {
+        width: 100%; /* Faz o vídeo ocupar toda a largura da tela */
+        max-width: 100%; /* Garante que o vídeo se ajuste bem */
+    }
+
+    h1 {
+        font-size: 2rem; /* Diminui o tamanho do título em telas pequenas */
+    }
+}
