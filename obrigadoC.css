@@ -1,6 +1,8 @@
 body {
     background-image: url('imgC.webp');
-    background-size: cover;
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed;
     font-family: "Iansui", cursive;
     font-weight: bold;
     text-align: center;
@@ -11,79 +13,76 @@ body {
 h1 {
     margin-bottom: 60px;
     text-align: center;
+    font-size: 3rem; 
+    letter-spacing: 5px;
 }
 
 .container {
-    display: flex;  
-    justify-content: flex-start; 
-    align-items: flex-start;  
-    height: 70vh;  
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 70vh; 
+    flex-wrap: wrap; 
 }
 
 .video {
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
     align-items: center;
-    margin-right: 200px; 
+    margin-right: 20px;
     margin-top: 16px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .text {
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    text-align: left;  
-    font-size: 2rem;  
-    max-width: 100%;  
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 2rem;
+    max-width: 100%;
     letter-spacing: 5px;
     line-height: 1.69;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 video {
-    max-width: 90%;  
-    max-height: 80vh;  
-    border-radius: 6px;  
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%; 
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes fadeInOut {
-    0% { opacity: 0; }    
-    50% { opacity: 1; }   
-    100% { opacity: 0; }  
-}
-
-h1 {
-    font-size: 3rem;
-    letter-spacing: 5px;
-    text-align: center;
-    animation: fadeInOut 4s infinite ease-in-out; 
-}
 
 @media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center center;
+    }
+
     .container {
-        flex-direction: column; 
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
     .video {
-        margin-right: 0; 
-        margin-top: 10px;
+        width: 90%; 
         max-width: 100%; 
+        margin-bottom: 20px;
     }
 
     .text {
         font-size: 1.5rem; 
-        letter-spacing: 3px; 
-        text-align: center; 
-        max-width: 90%; 
-    }
-
-    video {
-        width: 100%; 
-        max-width: 100%; 
+        text-align: center;
+        max-width: 90%;
+        margin-top: 20px; 
+        letter-spacing: 2px;
     }
 
     h1 {
-        font-size: 2rem; /* Diminui o tamanho do título em telas pequenas */
+        font-size: 2.5rem; /* Ajusta o tamanho do título no celular */
     }
 }
